@@ -1,1 +1,1 @@
-web: gunicorn competition_round2:competition_round2
+web: python competition_round2.py
