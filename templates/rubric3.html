@@ -1,0 +1,39 @@
+<html>
+<HEAD>
+<TITLE>Test Input</TITLE>
+<SCRIPT LANGUAGE="JavaScript">
+function testButton(form){
+
+
+
+          var performance = parseInt(document.getElementById('performance').value);
+          var tajweed = parseInt(document.getElementById('tajweed').value);
+          var score = ((performance + tajweed) / 2);
+        //  alert (score + " is the average score");
+          document.getElementById('score').innerHTML = "Total Score" + score;
+}
+
+</SCRIPT>
+</HEAD>
+<body>
+  <form action="" id="rubric1and2">
+    <h1>{{participant.name}}</h1>
+    <fieldset>
+    <legend>Question 1</legend>
+    <label> Tajweed rules </label>
+    <input type = "text" name = "tajweed" id = "tajweed"><br><br>
+    <label> Performance: </label>
+    <input type = "text" name = "performance" id = "performance"><br><br>
+
+
+    </fieldset>
+
+    <input type = "button" name = "button" Value="Score" onClick = "testButton(this.form)"><br>
+<br/>
+    <div id = "score"></div><br/>
+
+    <a href = "{{url_for('showParticipants', category_id = category.id)}}"> Go to next Participant</a> </br>
+    <a href = "{{url_for('showCategories')}}"> Go to next Category</a>
+
+</body>
+</html>

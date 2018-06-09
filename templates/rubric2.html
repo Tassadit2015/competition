@@ -1,0 +1,203 @@
+<html>
+<HEAD>
+<TITLE>Test Input</TITLE>
+<SCRIPT LANGUAGE="JavaScript">
+function testButton(form){
+  var countstart1 = 0;
+  for (i = 0; i <5; i++){
+    if (form.start1[i].checked)
+      countstart1++;
+    }
+
+    var countwarning1 = 0;
+    for (i = 0; i <5; i++){
+      if (form.warning1[i].checked)
+        countwarning1++;
+      }
+
+
+    var counthesitation1 = 0;
+      for (i = 0; i <5; i++){
+        if (form.hesitation1[i].checked)
+          counthesitation1++;
+        }
+
+      var counttajweed1 = 0;
+        for (i = 0; i <5; i++){
+          if (form.tajweed1[i].checked)
+            counttajweed1++;
+          }
+      var performance1 = parseInt(document.getElementById('performance1').value);
+      var score1 = (20 - ((1*countstart1) + (0.5*countwarning1) + (0.25*counthesitation1) + (0.25*counttajweed1) )) + performance1;
+
+
+      var countstart2 = 0;
+      for (i = 0; i <5; i++){
+        if (form.start2[i].checked)
+          countstart2++;
+        }
+
+        var countwarning2 = 0;
+        for (i = 0; i <5; i++){
+          if (form.warning2[i].checked)
+            countwarning2++;
+          }
+
+
+        var counthesitation2 = 0;
+          for (i = 0; i <5; i++){
+            if (form.hesitation2[i].checked)
+              counthesitation2++;
+            }
+
+          var counttajweed2 = 0;
+            for (i = 0; i <5; i++){
+              if (form.tajweed2[i].checked)
+                counttajweed2++;
+              }
+          var performance2 = parseInt(document.getElementById('performance2').value);
+          var score2 = (20 - ((1*countstart2) + (0.5*countwarning2) + (0.25*counthesitation2) + (0.25*counttajweed2) )) + performance2;
+
+          var countstart3 = 0;
+          for (i = 0; i <5; i++){
+            if (form.start3[i].checked)
+              countstart3++;
+            }
+
+            var countwarning3 = 0;
+            for (i = 0; i <5; i++){
+              if (form.warning3[i].checked)
+                countwarning3++;
+              }
+
+
+            var counthesitation3 = 0;
+              for (i = 0; i <5; i++){
+                if (form.hesitation3[i].checked)
+                  counthesitation3++;
+                }
+
+              var counttajweed3 = 0;
+                for (i = 0; i <5; i++){
+                  if (form.tajweed3[i].checked)
+                    counttajweed3++;
+                  }
+              var performance3 = parseInt(document.getElementById('performance3').value);
+              var score3 = (20 - ((1*countstart3) + (0.5*countwarning3) + (0.25*counthesitation3) + (0.25*counttajweed3) )) + performance3;
+
+
+
+
+
+          var score = ((score1 + score2 + score3) / 3);
+        //  alert (score + " is the average score");
+          document.getElementById('score').innerHTML = "Total Score" + score;
+}
+
+</SCRIPT>
+</HEAD>
+<body>
+  <form action="" id="rubric1and2">
+    <h1>{{participant.name}}</h1>
+    <fieldset>
+    <legend>Question 1</legend>
+    <label> Help to Start: </label>
+    <input type = "checkbox" name = "start1">
+    <input type = "checkbox" name = "start1">
+    <input type = "checkbox" name = "start1">
+    <input type = "checkbox" name = "start1">
+    <input type = "checkbox" name = "start1"><br><br>
+    <label> Warning: </label>
+    <input type = "checkbox" name = "warning1">
+    <input type = "checkbox" name = "warning1">
+    <input type = "checkbox" name = "warning1">
+    <input type = "checkbox" name = "warning1">
+    <input type = "checkbox" name = "warning1"><br><br>
+    <label> Hestitation: </label>
+    <input type = "checkbox" name = "hesitation1">
+    <input type = "checkbox" name = "hesitation1">
+    <input type = "checkbox" name = "hesitation1">
+    <input type = "checkbox" name = "hesitation1">
+    <input type = "checkbox" name = "hesitation1"><br><br>
+    <label> Tajweed Rules: </label>
+    <input type = "checkbox" name = "tajweed1">
+    <input type = "checkbox" name = "tajweed1">
+    <input type = "checkbox" name = "tajweed1">
+    <input type = "checkbox" name = "tajweed1">
+    <input type = "checkbox" name = "tajweed1"><br><br>
+    <label> Performance: </label>
+    <input type = "text" name = "performance1" id = "performance1"><br><br>
+
+
+    </fieldset>
+
+    <fieldset>
+    <legend>Question 2</legend>
+    <label> Help to Start: </label>
+    <input type = "checkbox" name = "start2">
+    <input type = "checkbox" name = "start2">
+    <input type = "checkbox" name = "start2">
+    <input type = "checkbox" name = "start2">
+    <input type = "checkbox" name = "start2"><br><br>
+    <label> Warning: </label>
+    <input type = "checkbox" name = "warning2">
+    <input type = "checkbox" name = "warning2">
+    <input type = "checkbox" name = "warning2">
+    <input type = "checkbox" name = "warning2">
+    <input type = "checkbox" name = "warning2"><br><br>
+    <label> Hestitation: </label>
+    <input type = "checkbox" name = "hesitation2">
+    <input type = "checkbox" name = "hesitation2">
+    <input type = "checkbox" name = "hesitation2">
+    <input type = "checkbox" name = "hesitation2">
+    <input type = "checkbox" name = "hesitation2"><br><br>
+    <label> Tajweed Rules: </label>
+    <input type = "checkbox" name = "tajweed2">
+    <input type = "checkbox" name = "tajweed2">
+    <input type = "checkbox" name = "tajweed2">
+    <input type = "checkbox" name = "tajweed2">
+    <input type = "checkbox" name = "tajweed2"><br><br>
+    <label> Performance: </label>
+    <input type = "text" name = "performance2" id = "performance2"><br><br>
+    </fieldset>
+
+
+    <fieldset>
+    <legend>Question 3</legend>
+    <label> Help to Start: </label>
+    <input type = "checkbox" name = "start3">
+    <input type = "checkbox" name = "start3">
+    <input type = "checkbox" name = "start3">
+    <input type = "checkbox" name = "start3">
+    <input type = "checkbox" name = "start3"><br><br>
+    <label> Warning: </label>
+    <input type = "checkbox" name = "warning3">
+    <input type = "checkbox" name = "warning3">
+    <input type = "checkbox" name = "warning3">
+    <input type = "checkbox" name = "warning3">
+    <input type = "checkbox" name = "warning3"><br><br>
+    <label> Hestitation: </label>
+    <input type = "checkbox" name = "hesitation3">
+    <input type = "checkbox" name = "hesitation3">
+    <input type = "checkbox" name = "hesitation3">
+    <input type = "checkbox" name = "hesitation3">
+    <input type = "checkbox" name = "hesitation3"><br><br>
+    <label> Tajweed Rules: </label>
+    <input type = "checkbox" name = "tajweed3">
+    <input type = "checkbox" name = "tajweed3">
+    <input type = "checkbox" name = "tajweed3">
+    <input type = "checkbox" name = "tajweed3">
+    <input type = "checkbox" name = "tajweed3"><br><br>
+    <label> Performance: </label>
+    <input type = "text" name = "performance3" id = "performance3"><br><br>
+    </fieldset>
+
+    <input type = "button" name = "button" Value="Score" onClick = "testButton(this.form)"><br>
+<br/>
+    <div id = "score"></div><br/>
+
+    <a href = "{{url_for('showParticipants', category_id = category.id)}}"> Go to next Participant</a> </br>
+    <a href = "{{url_for('showCategories')}}"> Go to next Category</a>
+
+</body>
+</html>
